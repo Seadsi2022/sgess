@@ -1,0 +1,32 @@
+{
+  "sgessApp": {
+    "ecampagne": {
+      "home": {
+        "title": "Ecampagnes",
+        "refreshListLabel": "Actualiser la liste",
+        "createLabel": "Créer un nouveau Ecampagne",
+        "createOrEditLabel": "Créer ou éditer un Ecampagne",
+        "search": "Recherche pour Ecampagne",
+        "notFound": "Aucun Ecampagne trouvé"
+      },
+      "created": "Un nouveau Ecampagne a été créé avec l'identifiant {{ param }}",
+      "updated": "Le Ecampagne avec l'identifiant {{ param }} a été mis à jour",
+      "deleted": "Le Ecampagne avec l'identifiant {{ param }} a été supprimé",
+      "delete": {
+        "question": "Êtes-vous certain de vouloir supprimer le Ecampagne {{ id }} ?"
+      },
+      "detail": {
+        "title": "Ecampagne"
+      },
+      "id": "ID",
+      "objetcampagne": "Objetcampagne",
+      "description": "Description",
+      "debutcampagne": "Debutcampagne",
+      "fincampagne": "Fincampagne",
+      "debutreelcamp": "Debutreelcamp",
+      "finreelcamp": "Finreelcamp",
+      "isopen": "Isopen",
+      "equestionnaire": "Equestionnaire"
+    }
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "sgessApp": {
+    "evaleurattribut": {
+      "home": {
+        "title": "Evaleurattributs",
+        "refreshListLabel": "Actualiser la liste",
+        "createLabel": "Créer un nouveau Evaleurattribut",
+        "createOrEditLabel": "Créer ou éditer un Evaleurattribut",
+        "search": "Recherche pour Evaleurattribut",
+        "notFound": "Aucun Evaleurattribut trouvé"
+      },
+      "created": "Un nouveau Evaleurattribut a été créé avec l'identifiant {{ param }}",
+      "updated": "Le Evaleurattribut avec l'identifiant {{ param }} a été mis à jour",
+      "deleted": "Le Evaleurattribut avec l'identifiant {{ param }} a été supprimé",
+      "delete": {
+        "question": "Êtes-vous certain de vouloir supprimer le Evaleurattribut {{ id }} ?"
+      },
+      "detail": {
+        "title": "Evaleurattribut"
+      },
+      "id": "ID",
+      "valeur": "Valeur",
+      "valeurdisplayname": "Valeurdisplayname",
+      "eattribut": "Eattribut"
+    }
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "sgessApp": {
+    "sstructure": {
+      "home": {
+        "title": "Sstructures",
+        "refreshListLabel": "Actualiser la liste",
+        "createLabel": "Créer un nouveau Sstructure",
+        "createOrEditLabel": "Créer ou éditer un Sstructure",
+        "search": "Recherche pour Sstructure",
+        "notFound": "Aucun Sstructure trouvé"
+      },
+      "created": "Un nouveau Sstructure a été créé avec l'identifiant {{ param }}",
+      "updated": "Le Sstructure avec l'identifiant {{ param }} a été mis à jour",
+      "deleted": "Le Sstructure avec l'identifiant {{ param }} a été supprimé",
+      "delete": {
+        "question": "Êtes-vous certain de vouloir supprimer le Sstructure {{ id }} ?"
+      },
+      "detail": {
+        "title": "Sstructure"
+      },
+      "id": "ID",
+      "nomstructure": "Nomstructure",
+      "siglestructure": "Siglestructure",
+      "telstructure": "Telstructure",
+      "bpstructure": "Bpstructure",
+      "emailstructure": "Emailstructure",
+      "profondeur": "Profondeur",
+      "evaleurvariable": "Evaleurvariable",
+      "parent": "Parent",
+      "scode": "Scode",
+      "slocalite": "Slocalite"
+    }
+  }
+}

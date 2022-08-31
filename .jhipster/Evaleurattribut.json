@@ -1,0 +1,31 @@
+{
+  "applications": "*",
+  "changelogDate": "20220831120828",
+  "dto": "no",
+  "embedded": false,
+  "entityTableName": "evaleurattribut",
+  "fields": [
+    {
+      "fieldName": "valeur",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "valeurdisplayname",
+      "fieldType": "String"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "Evaleurattribut",
+  "pagination": "pagination",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "eattribut",
+      "otherEntityRelationshipName": "evaleurattribut",
+      "relationshipName": "eattribut",
+      "relationshipType": "one-to-many"
+    }
+  ],
+  "service": "serviceImpl"
+}

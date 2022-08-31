@@ -1,0 +1,51 @@
+{
+  "applications": "*",
+  "changelogDate": "20220831120822",
+  "dto": "no",
+  "embedded": false,
+  "entityTableName": "scodevaleur",
+  "fields": [
+    {
+      "fieldName": "codevaleurLib",
+      "fieldType": "String"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "Scodevaleur",
+  "pagination": "pagination",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "slocalite",
+      "otherEntityRelationshipName": "typeLocalite",
+      "relationshipName": "slocalite",
+      "relationshipType": "one-to-many"
+    },
+    {
+      "otherEntityName": "equestionnaire",
+      "otherEntityRelationshipName": "typestructure",
+      "relationshipName": "equestionnaire",
+      "relationshipType": "one-to-many"
+    },
+    {
+      "otherEntityName": "scodevaleur",
+      "relationshipName": "parent",
+      "relationshipType": "many-to-one"
+    },
+    {
+      "otherEntityName": "scode",
+      "otherEntityRelationshipName": "scodevaleur",
+      "relationshipName": "scode",
+      "relationshipType": "many-to-one"
+    },
+    {
+      "otherEntityName": "sstructure",
+      "otherEntityRelationshipName": "scode",
+      "ownerSide": false,
+      "relationshipName": "sstructure",
+      "relationshipType": "many-to-many"
+    }
+  ],
+  "service": "serviceImpl"
+}

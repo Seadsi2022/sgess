@@ -1,0 +1,118 @@
+<div class="d-flex justify-content-center">
+  <div class="col-8">
+    <form name="editForm" role="form" novalidate (ngSubmit)="save()" [formGroup]="editForm">
+      <h2
+        id="jhi-equestionnaire-heading"
+        data-cy="EquestionnaireCreateUpdateHeading"
+        jhiTranslate="sgessApp.equestionnaire.home.createOrEditLabel"
+      >
+        Créer ou éditer un Equestionnaire
+      </h2>
+
+      <div>
+        <jhi-alert-error></jhi-alert-error>
+
+        <div class="row mb-3" *ngIf="editForm.controls.id.value !== null">
+          <label class="form-label" jhiTranslate="global.field.id" for="field_id">ID</label>
+          <input type="number" class="form-control" name="id" id="field_id" data-cy="id" formControlName="id" [readonly]="true" />
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="sgessApp.equestionnaire.objetquest" for="field_objetquest">Objetquest</label>
+          <input
+            type="text"
+            class="form-control"
+            name="objetquest"
+            id="field_objetquest"
+            data-cy="objetquest"
+            formControlName="objetquest"
+          />
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="sgessApp.equestionnaire.descriptionquest" for="field_descriptionquest"
+            >Descriptionquest</label
+          >
+          <input
+            type="text"
+            class="form-control"
+            name="descriptionquest"
+            id="field_descriptionquest"
+            data-cy="descriptionquest"
+            formControlName="descriptionquest"
+          />
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="sgessApp.equestionnaire.isActive" for="field_isActive">Is Active</label>
+          <input type="checkbox" class="form-check" name="isActive" id="field_isActive" data-cy="isActive" formControlName="isActive" />
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="sgessApp.equestionnaire.parent" for="field_parent">Parent</label>
+          <select
+            class="form-control"
+            id="field_parent"
+            data-cy="parent"
+            name="parent"
+            formControlName="parent"
+            [compareWith]="compareEquestionnaire"
+          >
+            <option [ngValue]="null"></option>
+            <option [ngValue]="equestionnaireOption" *ngFor="let equestionnaireOption of equestionnairesSharedCollection">
+              {{ equestionnaireOption.id }}
+            </option>
+          </select>
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="sgessApp.equestionnaire.ecampagne" for="field_ecampagne">Ecampagne</label>
+          <select
+            class="form-control"
+            id="field_ecampagne"
+            data-cy="ecampagne"
+            name="ecampagne"
+            formControlName="ecampagne"
+            [compareWith]="compareEcampagne"
+          >
+            <option [ngValue]="null"></option>
+            <option [ngValue]="ecampagneOption" *ngFor="let ecampagneOption of ecampagnesSharedCollection">{{ ecampagneOption.id }}</option>
+          </select>
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="sgessApp.equestionnaire.typestructure" for="field_typestructure">Typestructure</label>
+          <select
+            class="form-control"
+            id="field_typestructure"
+            data-cy="typestructure"
+            name="typestructure"
+            formControlName="typestructure"
+            [compareWith]="compareScodevaleur"
+          >
+            <option [ngValue]="null"></option>
+            <option [ngValue]="scodevaleurOption" *ngFor="let scodevaleurOption of scodevaleursSharedCollection">
+              {{ scodevaleurOption.id }}
+            </option>
+          </select>
+        </div>
+      </div>
+
+      <div>
+        <button type="button" id="cancel-save" data-cy="entityCreateCancelButton" class="btn btn-secondary" (click)="previousState()">
+          <fa-icon icon="ban"></fa-icon>&nbsp;<span jhiTranslate="entity.action.cancel">Annuler</span>
+        </button>
+
+        <button
+          type="submit"
+          id="save-entity"
+          data-cy="entityCreateSaveButton"
+          [disabled]="editForm.invalid || isSaving"
+          class="btn btn-primary"
+        >
+          <fa-icon icon="save"></fa-icon>&nbsp;<span jhiTranslate="entity.action.save">Sauvegarder</span>
+        </button>
+      </div>
+    </form>
+  </div>
+</div>

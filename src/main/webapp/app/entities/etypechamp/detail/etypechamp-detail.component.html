@@ -1,0 +1,43 @@
+<div class="d-flex justify-content-center">
+  <div class="col-8">
+    <div *ngIf="etypechamp">
+      <h2 data-cy="etypechampDetailsHeading"><span jhiTranslate="sgessApp.etypechamp.detail.title">Etypechamp</span></h2>
+
+      <hr />
+
+      <jhi-alert-error></jhi-alert-error>
+
+      <jhi-alert></jhi-alert>
+
+      <dl class="row-md jh-entity-details">
+        <dt><span jhiTranslate="global.field.id">ID</span></dt>
+        <dd>
+          <span>{{ etypechamp.id }}</span>
+        </dd>
+        <dt><span jhiTranslate="sgessApp.etypechamp.name">Name</span></dt>
+        <dd>
+          <span>{{ etypechamp.name }}</span>
+        </dd>
+        <dt><span jhiTranslate="sgessApp.etypechamp.displayname">Displayname</span></dt>
+        <dd>
+          <span>{{ etypechamp.displayname }}</span>
+        </dd>
+        <dt><span jhiTranslate="sgessApp.etypechamp.eattribut">Eattribut</span></dt>
+        <dd>
+          <span *ngFor="let eattribut of etypechamp.eattributs; let last = last">
+            <a [routerLink]="['/eattribut', eattribut.id, 'view']">{{ eattribut.id }}</a
+            >{{ last ? '' : ', ' }}
+          </span>
+        </dd>
+      </dl>
+
+      <button type="submit" (click)="previousState()" class="btn btn-info" data-cy="entityDetailsBackButton">
+        <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Retour</span>
+      </button>
+
+      <button type="button" [routerLink]="['/etypechamp', etypechamp.id, 'edit']" class="btn btn-primary">
+        <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Editer</span>
+      </button>
+    </div>
+  </div>
+</div>

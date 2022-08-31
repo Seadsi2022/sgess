@@ -1,0 +1,27 @@
+{
+  "sgessApp": {
+    "etypechamp": {
+      "home": {
+        "title": "Etypechamps",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Etypechamp",
+        "createOrEditLabel": "Create or edit a Etypechamp",
+        "search": "Search for Etypechamp",
+        "notFound": "No Etypechamps found"
+      },
+      "created": "A new Etypechamp is created with identifier {{ param }}",
+      "updated": "A Etypechamp is updated with identifier {{ param }}",
+      "deleted": "A Etypechamp is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Etypechamp {{ id }}?"
+      },
+      "detail": {
+        "title": "Etypechamp"
+      },
+      "id": "ID",
+      "name": "Name",
+      "displayname": "Displayname",
+      "eattribut": "Eattribut"
+    }
+  }
+}

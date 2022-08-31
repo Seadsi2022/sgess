@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-latest.xsd">
+    <!--
+        Added the constraints for entity Etypechamp.
+    -->
+    <changeSet id="20220831120826-2" author="jhipster">
+
+        <addForeignKeyConstraint baseColumnNames="etypechamp_id"
+                                 baseTableName="rel_etypechamp__eattribut"
+                                 constraintName="fk_rel_etypechamp__eattribut__etypechamp_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="etypechamp"/>
+
+        <addForeignKeyConstraint baseColumnNames="eattribut_id"
+                                 baseTableName="rel_etypechamp__eattribut"
+                                 constraintName="fk_rel_etypechamp__eattribut__eattribut_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="eattribut"/>
+    </changeSet>
+</databaseChangeLog>

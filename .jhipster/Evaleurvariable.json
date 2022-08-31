@@ -1,0 +1,45 @@
+{
+  "applications": "*",
+  "changelogDate": "20220831120839",
+  "dto": "no",
+  "embedded": false,
+  "entityTableName": "evaleurvariable",
+  "fields": [
+    {
+      "fieldName": "valeur",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "ligne",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "colonne",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "isActive",
+      "fieldType": "Boolean"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "Evaleurvariable",
+  "pagination": "pagination",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "egroupevariable",
+      "otherEntityRelationshipName": "evaleurvariable",
+      "relationshipName": "egroupevariable",
+      "relationshipType": "many-to-one"
+    },
+    {
+      "otherEntityName": "sstructure",
+      "otherEntityRelationshipName": "evaleurvariable",
+      "relationshipName": "sstructure",
+      "relationshipType": "many-to-one"
+    }
+  ],
+  "service": "serviceImpl"
+}

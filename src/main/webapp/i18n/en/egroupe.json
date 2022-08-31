@@ -1,0 +1,29 @@
+{
+  "sgessApp": {
+    "egroupe": {
+      "home": {
+        "title": "Egroupes",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Egroupe",
+        "createOrEditLabel": "Create or edit a Egroupe",
+        "search": "Search for Egroupe",
+        "notFound": "No Egroupes found"
+      },
+      "created": "A new Egroupe is created with identifier {{ param }}",
+      "updated": "A Egroupe is updated with identifier {{ param }}",
+      "deleted": "A Egroupe is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Egroupe {{ id }}?"
+      },
+      "detail": {
+        "title": "Egroupe"
+      },
+      "id": "ID",
+      "titregroupe": "Titregroupe",
+      "ordregroupe": "Ordregroupe",
+      "isActive": "Is Active",
+      "egroupevariable": "Egroupevariable",
+      "equestionnaire": "Equestionnaire"
+    }
+  }
+}

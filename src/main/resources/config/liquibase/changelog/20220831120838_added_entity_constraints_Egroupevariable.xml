@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-latest.xsd">
+    <!--
+        Added the constraints for entity Egroupevariable.
+    -->
+    <changeSet id="20220831120838-2" author="jhipster">
+
+        <addForeignKeyConstraint baseColumnNames="suivant_id"
+                                 baseTableName="egroupevariable"
+                                 constraintName="fk_egroupevariable__suivant_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="egroupevariable"/>
+
+        <addForeignKeyConstraint baseColumnNames="evariable_id"
+                                 baseTableName="egroupevariable"
+                                 constraintName="fk_egroupevariable__evariable_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="evariable"/>
+
+        <addForeignKeyConstraint baseColumnNames="egroupe_id"
+                                 baseTableName="egroupevariable"
+                                 constraintName="fk_egroupevariable__egroupe_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="egroupe"/>
+    </changeSet>
+</databaseChangeLog>

@@ -1,0 +1,33 @@
+{
+  "sgessApp": {
+    "evariable": {
+      "home": {
+        "title": "Evariables",
+        "refreshListLabel": "Actualiser la liste",
+        "createLabel": "Créer un nouveau Evariable",
+        "createOrEditLabel": "Créer ou éditer un Evariable",
+        "search": "Recherche pour Evariable",
+        "notFound": "Aucun Evariable trouvé"
+      },
+      "created": "Un nouveau Evariable a été créé avec l'identifiant {{ param }}",
+      "updated": "Le Evariable avec l'identifiant {{ param }} a été mis à jour",
+      "deleted": "Le Evariable avec l'identifiant {{ param }} a été supprimé",
+      "delete": {
+        "question": "Êtes-vous certain de vouloir supprimer le Evariable {{ id }} ?"
+      },
+      "detail": {
+        "title": "Evariable"
+      },
+      "id": "ID",
+      "nomvariable": "Nomvariable",
+      "descvariable": "Descvariable",
+      "champ": "Champ",
+      "isActive": "Is Active",
+      "eattributvariable": "Eattributvariable",
+      "eeventualitevariable": "Eeventualitevariable",
+      "egroupevariable": "Egroupevariable",
+      "etypevariable": "Etypevariable",
+      "eunite": "Eunite"
+    }
+  }
+}

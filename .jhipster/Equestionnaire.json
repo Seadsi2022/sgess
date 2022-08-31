@@ -1,0 +1,52 @@
+{
+  "applications": "*",
+  "changelogDate": "20220831120831",
+  "dto": "no",
+  "embedded": false,
+  "entityTableName": "equestionnaire",
+  "fields": [
+    {
+      "fieldName": "objetquest",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "descriptionquest",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "isActive",
+      "fieldType": "Boolean"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "Equestionnaire",
+  "pagination": "pagination",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "egroupe",
+      "otherEntityRelationshipName": "equestionnaire",
+      "relationshipName": "egroupe",
+      "relationshipType": "one-to-many"
+    },
+    {
+      "otherEntityName": "equestionnaire",
+      "relationshipName": "parent",
+      "relationshipType": "many-to-one"
+    },
+    {
+      "otherEntityName": "ecampagne",
+      "otherEntityRelationshipName": "equestionnaire",
+      "relationshipName": "ecampagne",
+      "relationshipType": "many-to-one"
+    },
+    {
+      "otherEntityName": "scodevaleur",
+      "otherEntityRelationshipName": "equestionnaire",
+      "relationshipName": "typestructure",
+      "relationshipType": "many-to-one"
+    }
+  ],
+  "service": "serviceImpl"
+}

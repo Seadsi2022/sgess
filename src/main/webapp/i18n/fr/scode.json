@@ -1,0 +1,26 @@
+{
+  "sgessApp": {
+    "scode": {
+      "home": {
+        "title": "Scodes",
+        "refreshListLabel": "Actualiser la liste",
+        "createLabel": "Créer un nouveau Scode",
+        "createOrEditLabel": "Créer ou éditer un Scode",
+        "search": "Recherche pour Scode",
+        "notFound": "Aucun Scode trouvé"
+      },
+      "created": "Un nouveau Scode a été créé avec l'identifiant {{ param }}",
+      "updated": "Le Scode avec l'identifiant {{ param }} a été mis à jour",
+      "deleted": "Le Scode avec l'identifiant {{ param }} a été supprimé",
+      "delete": {
+        "question": "Êtes-vous certain de vouloir supprimer le Scode {{ id }} ?"
+      },
+      "detail": {
+        "title": "Scode"
+      },
+      "id": "ID",
+      "codeLib": "Code Lib",
+      "scodevaleur": "Scodevaleur"
+    }
+  }
+}

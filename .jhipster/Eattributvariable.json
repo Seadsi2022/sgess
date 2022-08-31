@@ -1,0 +1,35 @@
+{
+  "applications": "*",
+  "changelogDate": "20220831120835",
+  "dto": "no",
+  "embedded": false,
+  "entityTableName": "eattributvariable",
+  "fields": [
+    {
+      "fieldName": "attrname",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "attrvalue",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "isActive",
+      "fieldType": "Boolean"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "Eattributvariable",
+  "pagination": "pagination",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "evariable",
+      "otherEntityRelationshipName": "eattributvariable",
+      "relationshipName": "evariable",
+      "relationshipType": "many-to-one"
+    }
+  ],
+  "service": "serviceImpl"
+}

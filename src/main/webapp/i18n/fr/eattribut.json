@@ -1,0 +1,28 @@
+{
+  "sgessApp": {
+    "eattribut": {
+      "home": {
+        "title": "Eattributs",
+        "refreshListLabel": "Actualiser la liste",
+        "createLabel": "Créer un nouveau Eattribut",
+        "createOrEditLabel": "Créer ou éditer un Eattribut",
+        "search": "Recherche pour Eattribut",
+        "notFound": "Aucun Eattribut trouvé"
+      },
+      "created": "Un nouveau Eattribut a été créé avec l'identifiant {{ param }}",
+      "updated": "Le Eattribut avec l'identifiant {{ param }} a été mis à jour",
+      "deleted": "Le Eattribut avec l'identifiant {{ param }} a été supprimé",
+      "delete": {
+        "question": "Êtes-vous certain de vouloir supprimer le Eattribut {{ id }} ?"
+      },
+      "detail": {
+        "title": "Eattribut"
+      },
+      "id": "ID",
+      "attrname": "Attrname",
+      "attrdisplayname": "Attrdisplayname",
+      "evaleurattribut": "Evaleurattribut",
+      "etypechamp": "Etypechamp"
+    }
+  }
+}

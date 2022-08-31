@@ -1,0 +1,44 @@
+<div class="d-flex justify-content-center">
+  <div class="col-8">
+    <div *ngIf="scodevaleur">
+      <h2 data-cy="scodevaleurDetailsHeading"><span jhiTranslate="sgessApp.scodevaleur.detail.title">Scodevaleur</span></h2>
+
+      <hr />
+
+      <jhi-alert-error></jhi-alert-error>
+
+      <jhi-alert></jhi-alert>
+
+      <dl class="row-md jh-entity-details">
+        <dt><span jhiTranslate="global.field.id">ID</span></dt>
+        <dd>
+          <span>{{ scodevaleur.id }}</span>
+        </dd>
+        <dt><span jhiTranslate="sgessApp.scodevaleur.codevaleurLib">Codevaleur Lib</span></dt>
+        <dd>
+          <span>{{ scodevaleur.codevaleurLib }}</span>
+        </dd>
+        <dt><span jhiTranslate="sgessApp.scodevaleur.parent">Parent</span></dt>
+        <dd>
+          <div *ngIf="scodevaleur.parent">
+            <a [routerLink]="['/scodevaleur', scodevaleur.parent.id, 'view']">{{ scodevaleur.parent?.id }}</a>
+          </div>
+        </dd>
+        <dt><span jhiTranslate="sgessApp.scodevaleur.scode">Scode</span></dt>
+        <dd>
+          <div *ngIf="scodevaleur.scode">
+            <a [routerLink]="['/scode', scodevaleur.scode.id, 'view']">{{ scodevaleur.scode?.id }}</a>
+          </div>
+        </dd>
+      </dl>
+
+      <button type="submit" (click)="previousState()" class="btn btn-info" data-cy="entityDetailsBackButton">
+        <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Retour</span>
+      </button>
+
+      <button type="button" [routerLink]="['/scodevaleur', scodevaleur.id, 'edit']" class="btn btn-primary">
+        <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Editer</span>
+      </button>
+    </div>
+  </div>
+</div>

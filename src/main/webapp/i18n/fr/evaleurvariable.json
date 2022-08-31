@@ -1,0 +1,30 @@
+{
+  "sgessApp": {
+    "evaleurvariable": {
+      "home": {
+        "title": "Evaleurvariables",
+        "refreshListLabel": "Actualiser la liste",
+        "createLabel": "Créer un nouveau Evaleurvariable",
+        "createOrEditLabel": "Créer ou éditer un Evaleurvariable",
+        "search": "Recherche pour Evaleurvariable",
+        "notFound": "Aucun Evaleurvariable trouvé"
+      },
+      "created": "Un nouveau Evaleurvariable a été créé avec l'identifiant {{ param }}",
+      "updated": "Le Evaleurvariable avec l'identifiant {{ param }} a été mis à jour",
+      "deleted": "Le Evaleurvariable avec l'identifiant {{ param }} a été supprimé",
+      "delete": {
+        "question": "Êtes-vous certain de vouloir supprimer le Evaleurvariable {{ id }} ?"
+      },
+      "detail": {
+        "title": "Evaleurvariable"
+      },
+      "id": "ID",
+      "valeur": "Valeur",
+      "ligne": "Ligne",
+      "colonne": "Colonne",
+      "isActive": "Is Active",
+      "egroupevariable": "Egroupevariable",
+      "sstructure": "Sstructure"
+    }
+  }
+}

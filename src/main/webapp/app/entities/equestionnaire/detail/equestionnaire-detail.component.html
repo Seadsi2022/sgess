@@ -1,0 +1,58 @@
+<div class="d-flex justify-content-center">
+  <div class="col-8">
+    <div *ngIf="equestionnaire">
+      <h2 data-cy="equestionnaireDetailsHeading"><span jhiTranslate="sgessApp.equestionnaire.detail.title">Equestionnaire</span></h2>
+
+      <hr />
+
+      <jhi-alert-error></jhi-alert-error>
+
+      <jhi-alert></jhi-alert>
+
+      <dl class="row-md jh-entity-details">
+        <dt><span jhiTranslate="global.field.id">ID</span></dt>
+        <dd>
+          <span>{{ equestionnaire.id }}</span>
+        </dd>
+        <dt><span jhiTranslate="sgessApp.equestionnaire.objetquest">Objetquest</span></dt>
+        <dd>
+          <span>{{ equestionnaire.objetquest }}</span>
+        </dd>
+        <dt><span jhiTranslate="sgessApp.equestionnaire.descriptionquest">Descriptionquest</span></dt>
+        <dd>
+          <span>{{ equestionnaire.descriptionquest }}</span>
+        </dd>
+        <dt><span jhiTranslate="sgessApp.equestionnaire.isActive">Is Active</span></dt>
+        <dd>
+          <span>{{ equestionnaire.isActive }}</span>
+        </dd>
+        <dt><span jhiTranslate="sgessApp.equestionnaire.parent">Parent</span></dt>
+        <dd>
+          <div *ngIf="equestionnaire.parent">
+            <a [routerLink]="['/equestionnaire', equestionnaire.parent.id, 'view']">{{ equestionnaire.parent?.id }}</a>
+          </div>
+        </dd>
+        <dt><span jhiTranslate="sgessApp.equestionnaire.ecampagne">Ecampagne</span></dt>
+        <dd>
+          <div *ngIf="equestionnaire.ecampagne">
+            <a [routerLink]="['/ecampagne', equestionnaire.ecampagne.id, 'view']">{{ equestionnaire.ecampagne?.id }}</a>
+          </div>
+        </dd>
+        <dt><span jhiTranslate="sgessApp.equestionnaire.typestructure">Typestructure</span></dt>
+        <dd>
+          <div *ngIf="equestionnaire.typestructure">
+            <a [routerLink]="['/scodevaleur', equestionnaire.typestructure.id, 'view']">{{ equestionnaire.typestructure?.id }}</a>
+          </div>
+        </dd>
+      </dl>
+
+      <button type="submit" (click)="previousState()" class="btn btn-info" data-cy="entityDetailsBackButton">
+        <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Retour</span>
+      </button>
+
+      <button type="button" [routerLink]="['/equestionnaire', equestionnaire.id, 'edit']" class="btn btn-primary">
+        <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Editer</span>
+      </button>
+    </div>
+  </div>
+</div>

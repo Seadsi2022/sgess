@@ -1,0 +1,48 @@
+<div class="d-flex justify-content-center">
+  <div class="col-8">
+    <div *ngIf="eattributvariable">
+      <h2 data-cy="eattributvariableDetailsHeading">
+        <span jhiTranslate="sgessApp.eattributvariable.detail.title">Eattributvariable</span>
+      </h2>
+
+      <hr />
+
+      <jhi-alert-error></jhi-alert-error>
+
+      <jhi-alert></jhi-alert>
+
+      <dl class="row-md jh-entity-details">
+        <dt><span jhiTranslate="global.field.id">ID</span></dt>
+        <dd>
+          <span>{{ eattributvariable.id }}</span>
+        </dd>
+        <dt><span jhiTranslate="sgessApp.eattributvariable.attrname">Attrname</span></dt>
+        <dd>
+          <span>{{ eattributvariable.attrname }}</span>
+        </dd>
+        <dt><span jhiTranslate="sgessApp.eattributvariable.attrvalue">Attrvalue</span></dt>
+        <dd>
+          <span>{{ eattributvariable.attrvalue }}</span>
+        </dd>
+        <dt><span jhiTranslate="sgessApp.eattributvariable.isActive">Is Active</span></dt>
+        <dd>
+          <span>{{ eattributvariable.isActive }}</span>
+        </dd>
+        <dt><span jhiTranslate="sgessApp.eattributvariable.evariable">Evariable</span></dt>
+        <dd>
+          <div *ngIf="eattributvariable.evariable">
+            <a [routerLink]="['/evariable', eattributvariable.evariable.id, 'view']">{{ eattributvariable.evariable?.id }}</a>
+          </div>
+        </dd>
+      </dl>
+
+      <button type="submit" (click)="previousState()" class="btn btn-info" data-cy="entityDetailsBackButton">
+        <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Retour</span>
+      </button>
+
+      <button type="button" [routerLink]="['/eattributvariable', eattributvariable.id, 'edit']" class="btn btn-primary">
+        <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Editer</span>
+      </button>
+    </div>
+  </div>
+</div>

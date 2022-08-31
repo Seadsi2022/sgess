@@ -1,0 +1,35 @@
+{
+  "applications": "*",
+  "changelogDate": "20220831120833",
+  "dto": "no",
+  "embedded": false,
+  "entityTableName": "etypevariable",
+  "fields": [
+    {
+      "fieldName": "nomtypevar",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "desctypevariable",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "isActive",
+      "fieldType": "Boolean"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "Etypevariable",
+  "pagination": "pagination",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "evariable",
+      "otherEntityRelationshipName": "etypevariable",
+      "relationshipName": "evariable",
+      "relationshipType": "one-to-many"
+    }
+  ],
+  "service": "serviceImpl"
+}

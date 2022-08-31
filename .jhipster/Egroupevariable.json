@@ -1,0 +1,48 @@
+{
+  "applications": "*",
+  "changelogDate": "20220831120838",
+  "dto": "no",
+  "embedded": false,
+  "entityTableName": "egroupevariable",
+  "fields": [
+    {
+      "fieldName": "ordrevariable",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "isActive",
+      "fieldType": "Boolean"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "Egroupevariable",
+  "pagination": "pagination",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "evaleurvariable",
+      "otherEntityRelationshipName": "egroupevariable",
+      "relationshipName": "evaleurvariable",
+      "relationshipType": "one-to-many"
+    },
+    {
+      "otherEntityName": "egroupevariable",
+      "relationshipName": "suivant",
+      "relationshipType": "many-to-one"
+    },
+    {
+      "otherEntityName": "evariable",
+      "otherEntityRelationshipName": "egroupevariable",
+      "relationshipName": "evariable",
+      "relationshipType": "many-to-one"
+    },
+    {
+      "otherEntityName": "egroupe",
+      "otherEntityRelationshipName": "egroupevariable",
+      "relationshipName": "egroupe",
+      "relationshipType": "many-to-one"
+    }
+  ],
+  "service": "serviceImpl"
+}

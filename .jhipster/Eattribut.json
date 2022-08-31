@@ -1,0 +1,38 @@
+{
+  "applications": "*",
+  "changelogDate": "20220831120827",
+  "dto": "no",
+  "embedded": false,
+  "entityTableName": "eattribut",
+  "fields": [
+    {
+      "fieldName": "attrname",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "attrdisplayname",
+      "fieldType": "String"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "Eattribut",
+  "pagination": "pagination",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "evaleurattribut",
+      "otherEntityRelationshipName": "eattribut",
+      "relationshipName": "evaleurattribut",
+      "relationshipType": "many-to-one"
+    },
+    {
+      "otherEntityName": "etypechamp",
+      "otherEntityRelationshipName": "eattribut",
+      "ownerSide": false,
+      "relationshipName": "etypechamp",
+      "relationshipType": "many-to-many"
+    }
+  ],
+  "service": "serviceImpl"
+}

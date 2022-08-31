@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-latest.xsd">
+    <!--
+        Added the constraints for entity Equestionnaire.
+    -->
+    <changeSet id="20220831120831-2" author="jhipster">
+
+        <addForeignKeyConstraint baseColumnNames="parent_id"
+                                 baseTableName="equestionnaire"
+                                 constraintName="fk_equestionnaire__parent_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="equestionnaire"/>
+
+        <addForeignKeyConstraint baseColumnNames="ecampagne_id"
+                                 baseTableName="equestionnaire"
+                                 constraintName="fk_equestionnaire__ecampagne_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="ecampagne"/>
+
+        <addForeignKeyConstraint baseColumnNames="typestructure_id"
+                                 baseTableName="equestionnaire"
+                                 constraintName="fk_equestionnaire__typestructure_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="scodevaleur"/>
+    </changeSet>
+</databaseChangeLog>

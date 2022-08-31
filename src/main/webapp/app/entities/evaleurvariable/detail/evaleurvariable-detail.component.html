@@ -1,0 +1,56 @@
+<div class="d-flex justify-content-center">
+  <div class="col-8">
+    <div *ngIf="evaleurvariable">
+      <h2 data-cy="evaleurvariableDetailsHeading"><span jhiTranslate="sgessApp.evaleurvariable.detail.title">Evaleurvariable</span></h2>
+
+      <hr />
+
+      <jhi-alert-error></jhi-alert-error>
+
+      <jhi-alert></jhi-alert>
+
+      <dl class="row-md jh-entity-details">
+        <dt><span jhiTranslate="global.field.id">ID</span></dt>
+        <dd>
+          <span>{{ evaleurvariable.id }}</span>
+        </dd>
+        <dt><span jhiTranslate="sgessApp.evaleurvariable.valeur">Valeur</span></dt>
+        <dd>
+          <span>{{ evaleurvariable.valeur }}</span>
+        </dd>
+        <dt><span jhiTranslate="sgessApp.evaleurvariable.ligne">Ligne</span></dt>
+        <dd>
+          <span>{{ evaleurvariable.ligne }}</span>
+        </dd>
+        <dt><span jhiTranslate="sgessApp.evaleurvariable.colonne">Colonne</span></dt>
+        <dd>
+          <span>{{ evaleurvariable.colonne }}</span>
+        </dd>
+        <dt><span jhiTranslate="sgessApp.evaleurvariable.isActive">Is Active</span></dt>
+        <dd>
+          <span>{{ evaleurvariable.isActive }}</span>
+        </dd>
+        <dt><span jhiTranslate="sgessApp.evaleurvariable.egroupevariable">Egroupevariable</span></dt>
+        <dd>
+          <div *ngIf="evaleurvariable.egroupevariable">
+            <a [routerLink]="['/egroupevariable', evaleurvariable.egroupevariable.id, 'view']">{{ evaleurvariable.egroupevariable?.id }}</a>
+          </div>
+        </dd>
+        <dt><span jhiTranslate="sgessApp.evaleurvariable.sstructure">Sstructure</span></dt>
+        <dd>
+          <div *ngIf="evaleurvariable.sstructure">
+            <a [routerLink]="['/sstructure', evaleurvariable.sstructure.id, 'view']">{{ evaleurvariable.sstructure?.id }}</a>
+          </div>
+        </dd>
+      </dl>
+
+      <button type="submit" (click)="previousState()" class="btn btn-info" data-cy="entityDetailsBackButton">
+        <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Retour</span>
+      </button>
+
+      <button type="button" [routerLink]="['/evaleurvariable', evaleurvariable.id, 'edit']" class="btn btn-primary">
+        <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Editer</span>
+      </button>
+    </div>
+  </div>
+</div>

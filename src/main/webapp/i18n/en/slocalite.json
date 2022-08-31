@@ -1,0 +1,30 @@
+{
+  "sgessApp": {
+    "slocalite": {
+      "home": {
+        "title": "Slocalites",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Slocalite",
+        "createOrEditLabel": "Create or edit a Slocalite",
+        "search": "Search for Slocalite",
+        "notFound": "No Slocalites found"
+      },
+      "created": "A new Slocalite is created with identifier {{ param }}",
+      "updated": "A Slocalite is updated with identifier {{ param }}",
+      "deleted": "A Slocalite is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Slocalite {{ id }}?"
+      },
+      "detail": {
+        "title": "Slocalite"
+      },
+      "id": "ID",
+      "codelocalite": "Codelocalite",
+      "nomlocalite": "Nomlocalite",
+      "sstructure": "Sstructure",
+      "parent": "Parent",
+      "natureLocalite": "Nature Localite",
+      "typeLocalite": "Type Localite"
+    }
+  }
+}

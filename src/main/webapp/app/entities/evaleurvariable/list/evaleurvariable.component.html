@@ -1,0 +1,154 @@
+<div>
+  <h2 id="page-heading" data-cy="EvaleurvariableHeading">
+    <span jhiTranslate="sgessApp.evaleurvariable.home.title">Evaleurvariables</span>
+
+    <div class="d-flex justify-content-end">
+      <button class="btn btn-info me-2" (click)="load()" [disabled]="isLoading">
+        <fa-icon icon="sync" [spin]="isLoading"></fa-icon>
+        <span jhiTranslate="sgessApp.evaleurvariable.home.refreshListLabel">Actualiser la liste</span>
+      </button>
+
+      <button
+        id="jh-create-entity"
+        data-cy="entityCreateButton"
+        class="btn btn-primary jh-create-entity create-evaleurvariable"
+        [routerLink]="['/evaleurvariable/new']"
+      >
+        <fa-icon icon="plus"></fa-icon>
+        <span class="hidden-sm-down" jhiTranslate="sgessApp.evaleurvariable.home.createLabel"> Créer un nouveau Evaleurvariable </span>
+      </button>
+    </div>
+  </h2>
+
+  <jhi-alert-error></jhi-alert-error>
+
+  <jhi-alert></jhi-alert>
+
+  <form name="searchForm" class="row row-cols-sm-auto align-items-center">
+    <div class="col-sm-12">
+      <div class="input-group w-100 mt-3">
+        <label class="visually-hidden" for="currentSearch" jhiTranslate="sgessApp.evaleurvariable.home.search"
+          >Recherche pour Evaleurvariable</label
+        >
+        <input
+          type="text"
+          class="form-control"
+          [(ngModel)]="currentSearch"
+          id="currentSearch"
+          name="currentSearch"
+          placeholder="{{ 'sgessApp.evaleurvariable.home.search' | translate }}"
+        />
+
+        <button class="btn btn-info" (click)="search(currentSearch)">
+          <fa-icon icon="search"></fa-icon>
+        </button>
+
+        <button class="btn btn-danger" (click)="search('')" *ngIf="currentSearch">
+          <fa-icon icon="trash-alt"></fa-icon>
+        </button>
+      </div>
+    </div>
+  </form>
+
+  <div class="alert alert-warning" id="no-result" *ngIf="evaleurvariables?.length === 0">
+    <span jhiTranslate="sgessApp.evaleurvariable.home.notFound">Aucun Evaleurvariable trouvé</span>
+  </div>
+
+  <div class="table-responsive" id="entities" *ngIf="evaleurvariables && evaleurvariables.length > 0">
+    <table class="table table-striped" aria-describedby="page-heading">
+      <thead>
+        <tr jhiSort [(predicate)]="predicate" [(ascending)]="ascending" (sortChange)="navigateToWithComponentValues()">
+          <th scope="col" jhiSortBy="id"><span jhiTranslate="global.field.id">ID</span> <fa-icon icon="sort"></fa-icon></th>
+          <th scope="col" jhiSortBy="valeur">
+            <span jhiTranslate="sgessApp.evaleurvariable.valeur">Valeur</span> <fa-icon *ngIf="!currentSearch" icon="sort"></fa-icon>
+          </th>
+          <th scope="col" jhiSortBy="ligne">
+            <span jhiTranslate="sgessApp.evaleurvariable.ligne">Ligne</span> <fa-icon icon="sort"></fa-icon>
+          </th>
+          <th scope="col" jhiSortBy="colonne">
+            <span jhiTranslate="sgessApp.evaleurvariable.colonne">Colonne</span> <fa-icon icon="sort"></fa-icon>
+          </th>
+          <th scope="col" jhiSortBy="isActive">
+            <span jhiTranslate="sgessApp.evaleurvariable.isActive">Is Active</span> <fa-icon icon="sort"></fa-icon>
+          </th>
+          <th scope="col" jhiSortBy="egroupevariable.id">
+            <span jhiTranslate="sgessApp.evaleurvariable.egroupevariable">Egroupevariable</span> <fa-icon icon="sort"></fa-icon>
+          </th>
+          <th scope="col" jhiSortBy="sstructure.id">
+            <span jhiTranslate="sgessApp.evaleurvariable.sstructure">Sstructure</span> <fa-icon icon="sort"></fa-icon>
+          </th>
+          <th scope="col"></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let evaleurvariable of evaleurvariables; trackBy: trackId" data-cy="entityTable">
+          <td>
+            <a [routerLink]="['/evaleurvariable', evaleurvariable.id, 'view']">{{ evaleurvariable.id }}</a>
+          </td>
+          <td>{{ evaleurvariable.valeur }}</td>
+          <td>{{ evaleurvariable.ligne }}</td>
+          <td>{{ evaleurvariable.colonne }}</td>
+          <td>{{ evaleurvariable.isActive }}</td>
+          <td>
+            <div *ngIf="evaleurvariable.egroupevariable">
+              <a [routerLink]="['/egroupevariable', evaleurvariable.egroupevariable.id, 'view']">{{
+                evaleurvariable.egroupevariable?.id
+              }}</a>
+            </div>
+          </td>
+          <td>
+            <div *ngIf="evaleurvariable.sstructure">
+              <a [routerLink]="['/sstructure', evaleurvariable.sstructure.id, 'view']">{{ evaleurvariable.sstructure?.id }}</a>
+            </div>
+          </td>
+          <td class="text-end">
+            <div class="btn-group">
+              <button
+                type="submit"
+                [routerLink]="['/evaleurvariable', evaleurvariable.id, 'view']"
+                class="btn btn-info btn-sm"
+                data-cy="entityDetailsButton"
+              >
+                <fa-icon icon="eye"></fa-icon>
+                <span class="d-none d-md-inline" jhiTranslate="entity.action.view">Voir</span>
+              </button>
+
+              <button
+                type="submit"
+                [routerLink]="['/evaleurvariable', evaleurvariable.id, 'edit']"
+                class="btn btn-primary btn-sm"
+                data-cy="entityEditButton"
+              >
+                <fa-icon icon="pencil-alt"></fa-icon>
+                <span class="d-none d-md-inline" jhiTranslate="entity.action.edit">Editer</span>
+              </button>
+
+              <button type="submit" (click)="delete(evaleurvariable)" class="btn btn-danger btn-sm" data-cy="entityDeleteButton">
+                <fa-icon icon="times"></fa-icon>
+                <span class="d-none d-md-inline" jhiTranslate="entity.action.delete">Supprimer</span>
+              </button>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div *ngIf="evaleurvariables && evaleurvariables.length > 0">
+    <div class="d-flex justify-content-center">
+      <jhi-item-count [params]="{ page: page, totalItems: totalItems, itemsPerPage: itemsPerPage }"></jhi-item-count>
+    </div>
+
+    <div class="d-flex justify-content-center">
+      <ngb-pagination
+        [collectionSize]="totalItems"
+        [page]="page"
+        [pageSize]="itemsPerPage"
+        [maxSize]="5"
+        [rotate]="true"
+        [boundaryLinks]="true"
+        (pageChange)="navigateToPage($event)"
+      ></ngb-pagination>
+    </div>
+  </div>
+</div>

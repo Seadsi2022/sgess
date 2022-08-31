@@ -1,0 +1,29 @@
+{
+  "sgessApp": {
+    "eunite": {
+      "home": {
+        "title": "Eunites",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Eunite",
+        "createOrEditLabel": "Create or edit a Eunite",
+        "search": "Search for Eunite",
+        "notFound": "No Eunites found"
+      },
+      "created": "A new Eunite is created with identifier {{ param }}",
+      "updated": "A Eunite is updated with identifier {{ param }}",
+      "deleted": "A Eunite is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Eunite {{ id }}?"
+      },
+      "detail": {
+        "title": "Eunite"
+      },
+      "id": "ID",
+      "nomunite": "Nomunite",
+      "symboleunite": "Symboleunite",
+      "facteur": "Facteur",
+      "evariable": "Evariable",
+      "unitebase": "Unitebase"
+    }
+  }
+}
