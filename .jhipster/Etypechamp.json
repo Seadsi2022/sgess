@@ -1,0 +1,32 @@
+{
+  "applications": "*",
+  "changelogDate": "20220831120826",
+  "dto": "no",
+  "embedded": false,
+  "entityTableName": "etypechamp",
+  "fields": [
+    {
+      "fieldName": "name",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "displayname",
+      "fieldType": "String"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "Etypechamp",
+  "pagination": "pagination",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "eattribut",
+      "otherEntityRelationshipName": "etypechamp",
+      "ownerSide": true,
+      "relationshipName": "eattribut",
+      "relationshipType": "many-to-many"
+    }
+  ],
+  "service": "serviceImpl"
+}

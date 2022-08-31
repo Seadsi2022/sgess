@@ -1,0 +1,27 @@
+{
+  "sgessApp": {
+    "eeventualite": {
+      "home": {
+        "title": "Eeventualites",
+        "refreshListLabel": "Actualiser la liste",
+        "createLabel": "Créer un nouveau Eeventualite",
+        "createOrEditLabel": "Créer ou éditer un Eeventualite",
+        "search": "Recherche pour Eeventualite",
+        "notFound": "Aucun Eeventualite trouvé"
+      },
+      "created": "Un nouveau Eeventualite a été créé avec l'identifiant {{ param }}",
+      "updated": "Le Eeventualite avec l'identifiant {{ param }} a été mis à jour",
+      "deleted": "Le Eeventualite avec l'identifiant {{ param }} a été supprimé",
+      "delete": {
+        "question": "Êtes-vous certain de vouloir supprimer le Eeventualite {{ id }} ?"
+      },
+      "detail": {
+        "title": "Eeventualite"
+      },
+      "id": "ID",
+      "eventualitevalue": "Eventualitevalue",
+      "isActive": "Is Active",
+      "eeventualitevariable": "Eeventualitevariable"
+    }
+  }
+}

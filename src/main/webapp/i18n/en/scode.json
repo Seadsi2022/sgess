@@ -1,0 +1,26 @@
+{
+  "sgessApp": {
+    "scode": {
+      "home": {
+        "title": "Scodes",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Scode",
+        "createOrEditLabel": "Create or edit a Scode",
+        "search": "Search for Scode",
+        "notFound": "No Scodes found"
+      },
+      "created": "A new Scode is created with identifier {{ param }}",
+      "updated": "A Scode is updated with identifier {{ param }}",
+      "deleted": "A Scode is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Scode {{ id }}?"
+      },
+      "detail": {
+        "title": "Scode"
+      },
+      "id": "ID",
+      "codeLib": "Code Lib",
+      "scodevaleur": "Scodevaleur"
+    }
+  }
+}

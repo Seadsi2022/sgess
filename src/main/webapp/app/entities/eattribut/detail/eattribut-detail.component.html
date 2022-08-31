@@ -1,0 +1,42 @@
+<div class="d-flex justify-content-center">
+  <div class="col-8">
+    <div *ngIf="eattribut">
+      <h2 data-cy="eattributDetailsHeading"><span jhiTranslate="sgessApp.eattribut.detail.title">Eattribut</span></h2>
+
+      <hr />
+
+      <jhi-alert-error></jhi-alert-error>
+
+      <jhi-alert></jhi-alert>
+
+      <dl class="row-md jh-entity-details">
+        <dt><span jhiTranslate="global.field.id">ID</span></dt>
+        <dd>
+          <span>{{ eattribut.id }}</span>
+        </dd>
+        <dt><span jhiTranslate="sgessApp.eattribut.attrname">Attrname</span></dt>
+        <dd>
+          <span>{{ eattribut.attrname }}</span>
+        </dd>
+        <dt><span jhiTranslate="sgessApp.eattribut.attrdisplayname">Attrdisplayname</span></dt>
+        <dd>
+          <span>{{ eattribut.attrdisplayname }}</span>
+        </dd>
+        <dt><span jhiTranslate="sgessApp.eattribut.evaleurattribut">Evaleurattribut</span></dt>
+        <dd>
+          <div *ngIf="eattribut.evaleurattribut">
+            <a [routerLink]="['/evaleurattribut', eattribut.evaleurattribut.id, 'view']">{{ eattribut.evaleurattribut?.id }}</a>
+          </div>
+        </dd>
+      </dl>
+
+      <button type="submit" (click)="previousState()" class="btn btn-info" data-cy="entityDetailsBackButton">
+        <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Retour</span>
+      </button>
+
+      <button type="button" [routerLink]="['/eattribut', eattribut.id, 'edit']" class="btn btn-primary">
+        <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Editer</span>
+      </button>
+    </div>
+  </div>
+</div>

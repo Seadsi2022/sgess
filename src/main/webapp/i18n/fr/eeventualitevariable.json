@@ -1,0 +1,26 @@
+{
+  "sgessApp": {
+    "eeventualitevariable": {
+      "home": {
+        "title": "Eeventualitevariables",
+        "refreshListLabel": "Actualiser la liste",
+        "createLabel": "Créer un nouveau Eeventualitevariable",
+        "createOrEditLabel": "Créer ou éditer un Eeventualitevariable",
+        "search": "Recherche pour Eeventualitevariable",
+        "notFound": "Aucun Eeventualitevariable trouvé"
+      },
+      "created": "Un nouveau Eeventualitevariable a été créé avec l'identifiant {{ param }}",
+      "updated": "Le Eeventualitevariable avec l'identifiant {{ param }} a été mis à jour",
+      "deleted": "Le Eeventualitevariable avec l'identifiant {{ param }} a été supprimé",
+      "delete": {
+        "question": "Êtes-vous certain de vouloir supprimer le Eeventualitevariable {{ id }} ?"
+      },
+      "detail": {
+        "title": "Eeventualitevariable"
+      },
+      "id": "ID",
+      "evariable": "Evariable",
+      "eeventualite": "Eeventualite"
+    }
+  }
+}

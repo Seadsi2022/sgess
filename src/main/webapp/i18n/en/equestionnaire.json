@@ -1,0 +1,31 @@
+{
+  "sgessApp": {
+    "equestionnaire": {
+      "home": {
+        "title": "Equestionnaires",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Equestionnaire",
+        "createOrEditLabel": "Create or edit a Equestionnaire",
+        "search": "Search for Equestionnaire",
+        "notFound": "No Equestionnaires found"
+      },
+      "created": "A new Equestionnaire is created with identifier {{ param }}",
+      "updated": "A Equestionnaire is updated with identifier {{ param }}",
+      "deleted": "A Equestionnaire is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Equestionnaire {{ id }}?"
+      },
+      "detail": {
+        "title": "Equestionnaire"
+      },
+      "id": "ID",
+      "objetquest": "Objetquest",
+      "descriptionquest": "Descriptionquest",
+      "isActive": "Is Active",
+      "egroupe": "Egroupe",
+      "parent": "Parent",
+      "ecampagne": "Ecampagne",
+      "typestructure": "Typestructure"
+    }
+  }
+}

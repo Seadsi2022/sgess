@@ -1,0 +1,30 @@
+{
+  "sgessApp": {
+    "egroupevariable": {
+      "home": {
+        "title": "Egroupevariables",
+        "refreshListLabel": "Actualiser la liste",
+        "createLabel": "Créer un nouveau Egroupevariable",
+        "createOrEditLabel": "Créer ou éditer un Egroupevariable",
+        "search": "Recherche pour Egroupevariable",
+        "notFound": "Aucun Egroupevariable trouvé"
+      },
+      "created": "Un nouveau Egroupevariable a été créé avec l'identifiant {{ param }}",
+      "updated": "Le Egroupevariable avec l'identifiant {{ param }} a été mis à jour",
+      "deleted": "Le Egroupevariable avec l'identifiant {{ param }} a été supprimé",
+      "delete": {
+        "question": "Êtes-vous certain de vouloir supprimer le Egroupevariable {{ id }} ?"
+      },
+      "detail": {
+        "title": "Egroupevariable"
+      },
+      "id": "ID",
+      "ordrevariable": "Ordrevariable",
+      "isActive": "Is Active",
+      "evaleurvariable": "Evaleurvariable",
+      "suivant": "Suivant",
+      "evariable": "Evariable",
+      "egroupe": "Egroupe"
+    }
+  }
+}

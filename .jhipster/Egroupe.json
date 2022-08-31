@@ -1,0 +1,41 @@
+{
+  "applications": "*",
+  "changelogDate": "20220831120832",
+  "dto": "no",
+  "embedded": false,
+  "entityTableName": "egroupe",
+  "fields": [
+    {
+      "fieldName": "titregroupe",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "ordregroupe",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "isActive",
+      "fieldType": "Boolean"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "Egroupe",
+  "pagination": "pagination",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "egroupevariable",
+      "otherEntityRelationshipName": "egroupe",
+      "relationshipName": "egroupevariable",
+      "relationshipType": "one-to-many"
+    },
+    {
+      "otherEntityName": "equestionnaire",
+      "otherEntityRelationshipName": "egroupe",
+      "relationshipName": "equestionnaire",
+      "relationshipType": "many-to-one"
+    }
+  ],
+  "service": "serviceImpl"
+}

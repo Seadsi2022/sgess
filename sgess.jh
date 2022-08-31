@@ -1,0 +1,181 @@
+
+
+// table code
+entity Scode {
+	codeLib String
+}
+
+// TABLE valeur
+entity Scodevaleur{
+	codevaleurLib String
+}
+// TABLE localite
+
+entity Slocalite{
+	codelocalite Long,
+	nomlocalite String
+}
+
+// TABLE structure
+entity Sstructure{
+	nomstructure String,
+	siglestructure String,
+	telstructure String,
+	bpstructure String,
+	emailstructure String,
+	profondeur Long,
+	
+}
+
+// TABLE etablissement
+entity Setablissement{
+	codeadministratif String
+}
+
+// TABLE type de champ
+
+entity Etypechamp{
+	name String,
+	displayname String,
+}
+
+// TABLE attributs de champ
+entity Eattribut{
+	attrname String,
+	attrdisplayname String,
+}
+// TABLE valeurs d'attributs
+entity Evaleurattribut{
+	valeur String,
+	valeurdisplayname String,	
+}
+
+// TABLE unite
+entity Eunite{
+	nomunite String,
+	symboleunite String,
+	facteur Long,
+}
+
+// TABLE campagne
+entity Ecampagne{
+	objetcampagne String,
+	description String,
+	debutcampagne Instant,
+	fincampagne Instant,
+	debutreelcamp Instant,
+	finreelcamp Instant,
+	isopen Boolean
+}
+
+// TABLE questionnaire
+entity Equestionnaire{
+	objetquest String,
+	descriptionquest String,
+	isActive Boolean
+}
+
+// TABLE groupe de questionnaire
+entity Egroupe{
+	titregroupe String,
+	ordregroupe Long,
+	isActive Boolean ,
+}
+
+// TABLE type de variable (entier,reel,text)
+entity Etypevariable{
+	nomtypevar String,
+	desctypevariable String,
+	isActive Boolean
+}
+
+// TABLE variable 
+entity Evariable{
+	nomvariable String,
+	descvariable String,
+	champ String,
+	isActive Boolean
+}
+// TABLE attributs variable 
+entity Eattributvariable{
+	attrname String,
+	attrvalue String,
+	isActive Boolean
+}
+
+// TABLE eventualite 
+entity Eeventualite{
+	eventualitevalue String,
+	isActive Boolean,
+}
+
+entity Eeventualitevariable{
+
+}
+// TABLE association groupe - variable 
+entity Egroupevariable{
+	ordrevariable Long,
+	isActive Boolean ,
+}
+
+// TABLE valeur - variable 
+entity Evaleurvariable{
+	valeur String,
+	ligne Long,
+	colonne Long,
+	isActive Boolean,
+}
+
+relationship OneToOne {
+	Setablissement{sstructure} to Sstructure
+}
+
+relationship ManyToMany {
+	Sstructure{scode} to Scodevaleur{sstructure},
+    Etypechamp{eattribut} to Eattribut{etypechamp},
+}
+
+// defining multiple OneToMany relationships with comments
+relationship OneToMany {
+	Scode to Scodevaleur,
+    Scodevaleur to Slocalite{typeLocalite},
+    Slocalite to Sstructure,
+    Evaleurattribut to Eattribut,
+    Ecampagne to Equestionnaire,
+    Scodevaleur to Equestionnaire{typestructure},
+    Equestionnaire to Egroupe,
+    Etypevariable to Evariable,
+    Eunite to Evariable,
+    Evariable to Eattributvariable,
+    Evariable to Eeventualitevariable,
+    Eeventualite to Eeventualitevariable,
+    Evariable to Egroupevariable,
+    Egroupe to Egroupevariable
+    Egroupevariable to Evaleurvariable
+    Sstructure to Evaleurvariable
+}
+
+relationship ManyToOne {
+	Scodevaleur{parent} to Scodevaleur,
+    Slocalite{parent} to Slocalite,
+    Sstructure{parent} to Sstructure,
+    Equestionnaire{parent} to Equestionnaire,
+    Egroupevariable{suivant} to Egroupevariable,
+    Eunite{unitebase} to Eunite
+    Slocalite{natureLocalite} to Scodevaleur,
+
+}
+
+// defining multiple oneToOne relationships
+
+// Set pagination options
+paginate * with pagination
+
+// Use Data Transfer Objects (DTO)
+// dto * with mapstruct
+
+// Set service options to all except few
+service all with serviceImpl
+
+// Set an angular suffix
+// angularSuffix * with mySuffix

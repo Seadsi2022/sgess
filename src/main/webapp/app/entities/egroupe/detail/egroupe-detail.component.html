@@ -1,0 +1,46 @@
+<div class="d-flex justify-content-center">
+  <div class="col-8">
+    <div *ngIf="egroupe">
+      <h2 data-cy="egroupeDetailsHeading"><span jhiTranslate="sgessApp.egroupe.detail.title">Egroupe</span></h2>
+
+      <hr />
+
+      <jhi-alert-error></jhi-alert-error>
+
+      <jhi-alert></jhi-alert>
+
+      <dl class="row-md jh-entity-details">
+        <dt><span jhiTranslate="global.field.id">ID</span></dt>
+        <dd>
+          <span>{{ egroupe.id }}</span>
+        </dd>
+        <dt><span jhiTranslate="sgessApp.egroupe.titregroupe">Titregroupe</span></dt>
+        <dd>
+          <span>{{ egroupe.titregroupe }}</span>
+        </dd>
+        <dt><span jhiTranslate="sgessApp.egroupe.ordregroupe">Ordregroupe</span></dt>
+        <dd>
+          <span>{{ egroupe.ordregroupe }}</span>
+        </dd>
+        <dt><span jhiTranslate="sgessApp.egroupe.isActive">Is Active</span></dt>
+        <dd>
+          <span>{{ egroupe.isActive }}</span>
+        </dd>
+        <dt><span jhiTranslate="sgessApp.egroupe.equestionnaire">Equestionnaire</span></dt>
+        <dd>
+          <div *ngIf="egroupe.equestionnaire">
+            <a [routerLink]="['/equestionnaire', egroupe.equestionnaire.id, 'view']">{{ egroupe.equestionnaire?.id }}</a>
+          </div>
+        </dd>
+      </dl>
+
+      <button type="submit" (click)="previousState()" class="btn btn-info" data-cy="entityDetailsBackButton">
+        <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Retour</span>
+      </button>
+
+      <button type="button" [routerLink]="['/egroupe', egroupe.id, 'edit']" class="btn btn-primary">
+        <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Editer</span>
+      </button>
+    </div>
+  </div>
+</div>

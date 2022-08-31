@@ -1,0 +1,28 @@
+{
+  "sgessApp": {
+    "eattributvariable": {
+      "home": {
+        "title": "Eattributvariables",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Eattributvariable",
+        "createOrEditLabel": "Create or edit a Eattributvariable",
+        "search": "Search for Eattributvariable",
+        "notFound": "No Eattributvariables found"
+      },
+      "created": "A new Eattributvariable is created with identifier {{ param }}",
+      "updated": "A Eattributvariable is updated with identifier {{ param }}",
+      "deleted": "A Eattributvariable is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Eattributvariable {{ id }}?"
+      },
+      "detail": {
+        "title": "Eattributvariable"
+      },
+      "id": "ID",
+      "attrname": "Attrname",
+      "attrvalue": "Attrvalue",
+      "isActive": "Is Active",
+      "evariable": "Evariable"
+    }
+  }
+}

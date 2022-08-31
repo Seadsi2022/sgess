@@ -1,0 +1,71 @@
+<div class="d-flex justify-content-center">
+  <div class="col-8">
+    <div *ngIf="sstructure">
+      <h2 data-cy="sstructureDetailsHeading"><span jhiTranslate="sgessApp.sstructure.detail.title">Sstructure</span></h2>
+
+      <hr />
+
+      <jhi-alert-error></jhi-alert-error>
+
+      <jhi-alert></jhi-alert>
+
+      <dl class="row-md jh-entity-details">
+        <dt><span jhiTranslate="global.field.id">ID</span></dt>
+        <dd>
+          <span>{{ sstructure.id }}</span>
+        </dd>
+        <dt><span jhiTranslate="sgessApp.sstructure.nomstructure">Nomstructure</span></dt>
+        <dd>
+          <span>{{ sstructure.nomstructure }}</span>
+        </dd>
+        <dt><span jhiTranslate="sgessApp.sstructure.siglestructure">Siglestructure</span></dt>
+        <dd>
+          <span>{{ sstructure.siglestructure }}</span>
+        </dd>
+        <dt><span jhiTranslate="sgessApp.sstructure.telstructure">Telstructure</span></dt>
+        <dd>
+          <span>{{ sstructure.telstructure }}</span>
+        </dd>
+        <dt><span jhiTranslate="sgessApp.sstructure.bpstructure">Bpstructure</span></dt>
+        <dd>
+          <span>{{ sstructure.bpstructure }}</span>
+        </dd>
+        <dt><span jhiTranslate="sgessApp.sstructure.emailstructure">Emailstructure</span></dt>
+        <dd>
+          <span>{{ sstructure.emailstructure }}</span>
+        </dd>
+        <dt><span jhiTranslate="sgessApp.sstructure.profondeur">Profondeur</span></dt>
+        <dd>
+          <span>{{ sstructure.profondeur }}</span>
+        </dd>
+        <dt><span jhiTranslate="sgessApp.sstructure.parent">Parent</span></dt>
+        <dd>
+          <div *ngIf="sstructure.parent">
+            <a [routerLink]="['/sstructure', sstructure.parent.id, 'view']">{{ sstructure.parent?.id }}</a>
+          </div>
+        </dd>
+        <dt><span jhiTranslate="sgessApp.sstructure.scode">Scode</span></dt>
+        <dd>
+          <span *ngFor="let scode of sstructure.scodes; let last = last">
+            <a [routerLink]="['/scodevaleur', scode.id, 'view']">{{ scode.id }}</a
+            >{{ last ? '' : ', ' }}
+          </span>
+        </dd>
+        <dt><span jhiTranslate="sgessApp.sstructure.slocalite">Slocalite</span></dt>
+        <dd>
+          <div *ngIf="sstructure.slocalite">
+            <a [routerLink]="['/slocalite', sstructure.slocalite.id, 'view']">{{ sstructure.slocalite?.id }}</a>
+          </div>
+        </dd>
+      </dl>
+
+      <button type="submit" (click)="previousState()" class="btn btn-info" data-cy="entityDetailsBackButton">
+        <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Retour</span>
+      </button>
+
+      <button type="button" [routerLink]="['/sstructure', sstructure.id, 'edit']" class="btn btn-primary">
+        <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Editer</span>
+      </button>
+    </div>
+  </div>
+</div>

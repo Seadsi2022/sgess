@@ -1,0 +1,40 @@
+{
+  "applications": "*",
+  "changelogDate": "20220831120829",
+  "dto": "no",
+  "embedded": false,
+  "entityTableName": "eunite",
+  "fields": [
+    {
+      "fieldName": "nomunite",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "symboleunite",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "facteur",
+      "fieldType": "Long"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "Eunite",
+  "pagination": "pagination",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "evariable",
+      "otherEntityRelationshipName": "eunite",
+      "relationshipName": "evariable",
+      "relationshipType": "one-to-many"
+    },
+    {
+      "otherEntityName": "eunite",
+      "relationshipName": "unitebase",
+      "relationshipType": "many-to-one"
+    }
+  ],
+  "service": "serviceImpl"
+}

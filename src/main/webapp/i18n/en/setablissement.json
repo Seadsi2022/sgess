@@ -1,0 +1,26 @@
+{
+  "sgessApp": {
+    "setablissement": {
+      "home": {
+        "title": "Setablissements",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Setablissement",
+        "createOrEditLabel": "Create or edit a Setablissement",
+        "search": "Search for Setablissement",
+        "notFound": "No Setablissements found"
+      },
+      "created": "A new Setablissement is created with identifier {{ param }}",
+      "updated": "A Setablissement is updated with identifier {{ param }}",
+      "deleted": "A Setablissement is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Setablissement {{ id }}?"
+      },
+      "detail": {
+        "title": "Setablissement"
+      },
+      "id": "ID",
+      "codeadministratif": "Codeadministratif",
+      "sstructure": "Sstructure"
+    }
+  }
+}

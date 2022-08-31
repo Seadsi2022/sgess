@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-latest.xsd">
+    <!--
+        Added the constraints for entity Sstructure.
+    -->
+    <changeSet id="20220831120824-2" author="jhipster">
+
+        <addForeignKeyConstraint baseColumnNames="parent_id"
+                                 baseTableName="sstructure"
+                                 constraintName="fk_sstructure__parent_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="sstructure"/>
+
+        <addForeignKeyConstraint baseColumnNames="sstructure_id"
+                                 baseTableName="rel_sstructure__scode"
+                                 constraintName="fk_rel_sstructure__scode__sstructure_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="sstructure"/>
+
+        <addForeignKeyConstraint baseColumnNames="scode_id"
+                                 baseTableName="rel_sstructure__scode"
+                                 constraintName="fk_rel_sstructure__scode__scode_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="scodevaleur"/>
+
+        <addForeignKeyConstraint baseColumnNames="slocalite_id"
+                                 baseTableName="sstructure"
+                                 constraintName="fk_sstructure__slocalite_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="slocalite"/>
+    </changeSet>
+</databaseChangeLog>

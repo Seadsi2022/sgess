@@ -1,0 +1,63 @@
+{
+  "applications": "*",
+  "changelogDate": "20220831120834",
+  "dto": "no",
+  "embedded": false,
+  "entityTableName": "evariable",
+  "fields": [
+    {
+      "fieldName": "nomvariable",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "descvariable",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "champ",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "isActive",
+      "fieldType": "Boolean"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "Evariable",
+  "pagination": "pagination",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "eattributvariable",
+      "otherEntityRelationshipName": "evariable",
+      "relationshipName": "eattributvariable",
+      "relationshipType": "one-to-many"
+    },
+    {
+      "otherEntityName": "eeventualitevariable",
+      "otherEntityRelationshipName": "evariable",
+      "relationshipName": "eeventualitevariable",
+      "relationshipType": "one-to-many"
+    },
+    {
+      "otherEntityName": "egroupevariable",
+      "otherEntityRelationshipName": "evariable",
+      "relationshipName": "egroupevariable",
+      "relationshipType": "one-to-many"
+    },
+    {
+      "otherEntityName": "etypevariable",
+      "otherEntityRelationshipName": "evariable",
+      "relationshipName": "etypevariable",
+      "relationshipType": "many-to-one"
+    },
+    {
+      "otherEntityName": "eunite",
+      "otherEntityRelationshipName": "evariable",
+      "relationshipName": "eunite",
+      "relationshipType": "many-to-one"
+    }
+  ],
+  "service": "serviceImpl"
+}

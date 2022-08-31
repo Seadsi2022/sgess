@@ -1,0 +1,36 @@
+<div class="d-flex justify-content-center">
+  <div class="col-8">
+    <div *ngIf="evaleurattribut">
+      <h2 data-cy="evaleurattributDetailsHeading"><span jhiTranslate="sgessApp.evaleurattribut.detail.title">Evaleurattribut</span></h2>
+
+      <hr />
+
+      <jhi-alert-error></jhi-alert-error>
+
+      <jhi-alert></jhi-alert>
+
+      <dl class="row-md jh-entity-details">
+        <dt><span jhiTranslate="global.field.id">ID</span></dt>
+        <dd>
+          <span>{{ evaleurattribut.id }}</span>
+        </dd>
+        <dt><span jhiTranslate="sgessApp.evaleurattribut.valeur">Valeur</span></dt>
+        <dd>
+          <span>{{ evaleurattribut.valeur }}</span>
+        </dd>
+        <dt><span jhiTranslate="sgessApp.evaleurattribut.valeurdisplayname">Valeurdisplayname</span></dt>
+        <dd>
+          <span>{{ evaleurattribut.valeurdisplayname }}</span>
+        </dd>
+      </dl>
+
+      <button type="submit" (click)="previousState()" class="btn btn-info" data-cy="entityDetailsBackButton">
+        <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Retour</span>
+      </button>
+
+      <button type="button" [routerLink]="['/evaleurattribut', evaleurattribut.id, 'edit']" class="btn btn-primary">
+        <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Editer</span>
+      </button>
+    </div>
+  </div>
+</div>

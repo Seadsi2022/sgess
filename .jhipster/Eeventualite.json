@@ -1,0 +1,31 @@
+{
+  "applications": "*",
+  "changelogDate": "20220831120836",
+  "dto": "no",
+  "embedded": false,
+  "entityTableName": "eeventualite",
+  "fields": [
+    {
+      "fieldName": "eventualitevalue",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "isActive",
+      "fieldType": "Boolean"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "Eeventualite",
+  "pagination": "pagination",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "eeventualitevariable",
+      "otherEntityRelationshipName": "eeventualite",
+      "relationshipName": "eeventualitevariable",
+      "relationshipType": "one-to-many"
+    }
+  ],
+  "service": "serviceImpl"
+}

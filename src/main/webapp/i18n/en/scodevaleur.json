@@ -1,0 +1,30 @@
+{
+  "sgessApp": {
+    "scodevaleur": {
+      "home": {
+        "title": "Scodevaleurs",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Scodevaleur",
+        "createOrEditLabel": "Create or edit a Scodevaleur",
+        "search": "Search for Scodevaleur",
+        "notFound": "No Scodevaleurs found"
+      },
+      "created": "A new Scodevaleur is created with identifier {{ param }}",
+      "updated": "A Scodevaleur is updated with identifier {{ param }}",
+      "deleted": "A Scodevaleur is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Scodevaleur {{ id }}?"
+      },
+      "detail": {
+        "title": "Scodevaleur"
+      },
+      "id": "ID",
+      "codevaleurLib": "Codevaleur Lib",
+      "slocalite": "Slocalite",
+      "equestionnaire": "Equestionnaire",
+      "parent": "Parent",
+      "scode": "Scode",
+      "sstructure": "Sstructure"
+    }
+  }
+}

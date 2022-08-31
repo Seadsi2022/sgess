@@ -1,0 +1,56 @@
+<div class="d-flex justify-content-center">
+  <div class="col-8">
+    <div *ngIf="ecampagne">
+      <h2 data-cy="ecampagneDetailsHeading"><span jhiTranslate="sgessApp.ecampagne.detail.title">Ecampagne</span></h2>
+
+      <hr />
+
+      <jhi-alert-error></jhi-alert-error>
+
+      <jhi-alert></jhi-alert>
+
+      <dl class="row-md jh-entity-details">
+        <dt><span jhiTranslate="global.field.id">ID</span></dt>
+        <dd>
+          <span>{{ ecampagne.id }}</span>
+        </dd>
+        <dt><span jhiTranslate="sgessApp.ecampagne.objetcampagne">Objetcampagne</span></dt>
+        <dd>
+          <span>{{ ecampagne.objetcampagne }}</span>
+        </dd>
+        <dt><span jhiTranslate="sgessApp.ecampagne.description">Description</span></dt>
+        <dd>
+          <span>{{ ecampagne.description }}</span>
+        </dd>
+        <dt><span jhiTranslate="sgessApp.ecampagne.debutcampagne">Debutcampagne</span></dt>
+        <dd>
+          <span>{{ ecampagne.debutcampagne | formatMediumDatetime }}</span>
+        </dd>
+        <dt><span jhiTranslate="sgessApp.ecampagne.fincampagne">Fincampagne</span></dt>
+        <dd>
+          <span>{{ ecampagne.fincampagne | formatMediumDatetime }}</span>
+        </dd>
+        <dt><span jhiTranslate="sgessApp.ecampagne.debutreelcamp">Debutreelcamp</span></dt>
+        <dd>
+          <span>{{ ecampagne.debutreelcamp | formatMediumDatetime }}</span>
+        </dd>
+        <dt><span jhiTranslate="sgessApp.ecampagne.finreelcamp">Finreelcamp</span></dt>
+        <dd>
+          <span>{{ ecampagne.finreelcamp | formatMediumDatetime }}</span>
+        </dd>
+        <dt><span jhiTranslate="sgessApp.ecampagne.isopen">Isopen</span></dt>
+        <dd>
+          <span>{{ ecampagne.isopen }}</span>
+        </dd>
+      </dl>
+
+      <button type="submit" (click)="previousState()" class="btn btn-info" data-cy="entityDetailsBackButton">
+        <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Retour</span>
+      </button>
+
+      <button type="button" [routerLink]="['/ecampagne', ecampagne.id, 'edit']" class="btn btn-primary">
+        <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Editer</span>
+      </button>
+    </div>
+  </div>
+</div>

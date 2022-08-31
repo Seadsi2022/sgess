@@ -1,0 +1,54 @@
+<div class="d-flex justify-content-center">
+  <div class="col-8">
+    <div *ngIf="egroupevariable">
+      <h2 data-cy="egroupevariableDetailsHeading"><span jhiTranslate="sgessApp.egroupevariable.detail.title">Egroupevariable</span></h2>
+
+      <hr />
+
+      <jhi-alert-error></jhi-alert-error>
+
+      <jhi-alert></jhi-alert>
+
+      <dl class="row-md jh-entity-details">
+        <dt><span jhiTranslate="global.field.id">ID</span></dt>
+        <dd>
+          <span>{{ egroupevariable.id }}</span>
+        </dd>
+        <dt><span jhiTranslate="sgessApp.egroupevariable.ordrevariable">Ordrevariable</span></dt>
+        <dd>
+          <span>{{ egroupevariable.ordrevariable }}</span>
+        </dd>
+        <dt><span jhiTranslate="sgessApp.egroupevariable.isActive">Is Active</span></dt>
+        <dd>
+          <span>{{ egroupevariable.isActive }}</span>
+        </dd>
+        <dt><span jhiTranslate="sgessApp.egroupevariable.suivant">Suivant</span></dt>
+        <dd>
+          <div *ngIf="egroupevariable.suivant">
+            <a [routerLink]="['/egroupevariable', egroupevariable.suivant.id, 'view']">{{ egroupevariable.suivant?.id }}</a>
+          </div>
+        </dd>
+        <dt><span jhiTranslate="sgessApp.egroupevariable.evariable">Evariable</span></dt>
+        <dd>
+          <div *ngIf="egroupevariable.evariable">
+            <a [routerLink]="['/evariable', egroupevariable.evariable.id, 'view']">{{ egroupevariable.evariable?.id }}</a>
+          </div>
+        </dd>
+        <dt><span jhiTranslate="sgessApp.egroupevariable.egroupe">Egroupe</span></dt>
+        <dd>
+          <div *ngIf="egroupevariable.egroupe">
+            <a [routerLink]="['/egroupe', egroupevariable.egroupe.id, 'view']">{{ egroupevariable.egroupe?.id }}</a>
+          </div>
+        </dd>
+      </dl>
+
+      <button type="submit" (click)="previousState()" class="btn btn-info" data-cy="entityDetailsBackButton">
+        <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Retour</span>
+      </button>
+
+      <button type="button" [routerLink]="['/egroupevariable', egroupevariable.id, 'edit']" class="btn btn-primary">
+        <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Editer</span>
+      </button>
+    </div>
+  </div>
+</div>

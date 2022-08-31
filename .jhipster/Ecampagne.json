@@ -1,0 +1,51 @@
+{
+  "applications": "*",
+  "changelogDate": "20220831120830",
+  "dto": "no",
+  "embedded": false,
+  "entityTableName": "ecampagne",
+  "fields": [
+    {
+      "fieldName": "objetcampagne",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "description",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "debutcampagne",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "fincampagne",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "debutreelcamp",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "finreelcamp",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "isopen",
+      "fieldType": "Boolean"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "Ecampagne",
+  "pagination": "pagination",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "equestionnaire",
+      "otherEntityRelationshipName": "ecampagne",
+      "relationshipName": "equestionnaire",
+      "relationshipType": "one-to-many"
+    }
+  ],
+  "service": "serviceImpl"
+}

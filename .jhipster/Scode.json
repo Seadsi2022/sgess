@@ -1,0 +1,27 @@
+{
+  "applications": "*",
+  "changelogDate": "20220831120821",
+  "dto": "no",
+  "embedded": false,
+  "entityTableName": "scode",
+  "fields": [
+    {
+      "fieldName": "codeLib",
+      "fieldType": "String"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "Scode",
+  "pagination": "pagination",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "scodevaleur",
+      "otherEntityRelationshipName": "scode",
+      "relationshipName": "scodevaleur",
+      "relationshipType": "one-to-many"
+    }
+  ],
+  "service": "serviceImpl"
+}

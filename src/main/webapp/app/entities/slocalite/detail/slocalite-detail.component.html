@@ -1,0 +1,54 @@
+<div class="d-flex justify-content-center">
+  <div class="col-8">
+    <div *ngIf="slocalite">
+      <h2 data-cy="slocaliteDetailsHeading"><span jhiTranslate="sgessApp.slocalite.detail.title">Slocalite</span></h2>
+
+      <hr />
+
+      <jhi-alert-error></jhi-alert-error>
+
+      <jhi-alert></jhi-alert>
+
+      <dl class="row-md jh-entity-details">
+        <dt><span jhiTranslate="global.field.id">ID</span></dt>
+        <dd>
+          <span>{{ slocalite.id }}</span>
+        </dd>
+        <dt><span jhiTranslate="sgessApp.slocalite.codelocalite">Codelocalite</span></dt>
+        <dd>
+          <span>{{ slocalite.codelocalite }}</span>
+        </dd>
+        <dt><span jhiTranslate="sgessApp.slocalite.nomlocalite">Nomlocalite</span></dt>
+        <dd>
+          <span>{{ slocalite.nomlocalite }}</span>
+        </dd>
+        <dt><span jhiTranslate="sgessApp.slocalite.parent">Parent</span></dt>
+        <dd>
+          <div *ngIf="slocalite.parent">
+            <a [routerLink]="['/slocalite', slocalite.parent.id, 'view']">{{ slocalite.parent?.id }}</a>
+          </div>
+        </dd>
+        <dt><span jhiTranslate="sgessApp.slocalite.natureLocalite">Nature Localite</span></dt>
+        <dd>
+          <div *ngIf="slocalite.natureLocalite">
+            <a [routerLink]="['/scodevaleur', slocalite.natureLocalite.id, 'view']">{{ slocalite.natureLocalite?.id }}</a>
+          </div>
+        </dd>
+        <dt><span jhiTranslate="sgessApp.slocalite.typeLocalite">Type Localite</span></dt>
+        <dd>
+          <div *ngIf="slocalite.typeLocalite">
+            <a [routerLink]="['/scodevaleur', slocalite.typeLocalite.id, 'view']">{{ slocalite.typeLocalite?.id }}</a>
+          </div>
+        </dd>
+      </dl>
+
+      <button type="submit" (click)="previousState()" class="btn btn-info" data-cy="entityDetailsBackButton">
+        <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Retour</span>
+      </button>
+
+      <button type="button" [routerLink]="['/slocalite', slocalite.id, 'edit']" class="btn btn-primary">
+        <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Editer</span>
+      </button>
+    </div>
+  </div>
+</div>

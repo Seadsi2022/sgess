@@ -1,0 +1,28 @@
+{
+  "sgessApp": {
+    "etypevariable": {
+      "home": {
+        "title": "Etypevariables",
+        "refreshListLabel": "Actualiser la liste",
+        "createLabel": "Créer un nouveau Etypevariable",
+        "createOrEditLabel": "Créer ou éditer un Etypevariable",
+        "search": "Recherche pour Etypevariable",
+        "notFound": "Aucun Etypevariable trouvé"
+      },
+      "created": "Un nouveau Etypevariable a été créé avec l'identifiant {{ param }}",
+      "updated": "Le Etypevariable avec l'identifiant {{ param }} a été mis à jour",
+      "deleted": "Le Etypevariable avec l'identifiant {{ param }} a été supprimé",
+      "delete": {
+        "question": "Êtes-vous certain de vouloir supprimer le Etypevariable {{ id }} ?"
+      },
+      "detail": {
+        "title": "Etypevariable"
+      },
+      "id": "ID",
+      "nomtypevar": "Nomtypevar",
+      "desctypevariable": "Desctypevariable",
+      "isActive": "Is Active",
+      "evariable": "Evariable"
+    }
+  }
+}

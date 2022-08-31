@@ -1,0 +1,155 @@
+<div class="d-flex justify-content-center">
+  <div class="col-8">
+    <form name="editForm" role="form" novalidate (ngSubmit)="save()" [formGroup]="editForm">
+      <h2 id="jhi-sstructure-heading" data-cy="SstructureCreateUpdateHeading" jhiTranslate="sgessApp.sstructure.home.createOrEditLabel">
+        Créer ou éditer un Sstructure
+      </h2>
+
+      <div>
+        <jhi-alert-error></jhi-alert-error>
+
+        <div class="row mb-3" *ngIf="editForm.controls.id.value !== null">
+          <label class="form-label" jhiTranslate="global.field.id" for="field_id">ID</label>
+          <input type="number" class="form-control" name="id" id="field_id" data-cy="id" formControlName="id" [readonly]="true" />
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="sgessApp.sstructure.nomstructure" for="field_nomstructure">Nomstructure</label>
+          <input
+            type="text"
+            class="form-control"
+            name="nomstructure"
+            id="field_nomstructure"
+            data-cy="nomstructure"
+            formControlName="nomstructure"
+          />
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="sgessApp.sstructure.siglestructure" for="field_siglestructure">Siglestructure</label>
+          <input
+            type="text"
+            class="form-control"
+            name="siglestructure"
+            id="field_siglestructure"
+            data-cy="siglestructure"
+            formControlName="siglestructure"
+          />
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="sgessApp.sstructure.telstructure" for="field_telstructure">Telstructure</label>
+          <input
+            type="text"
+            class="form-control"
+            name="telstructure"
+            id="field_telstructure"
+            data-cy="telstructure"
+            formControlName="telstructure"
+          />
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="sgessApp.sstructure.bpstructure" for="field_bpstructure">Bpstructure</label>
+          <input
+            type="text"
+            class="form-control"
+            name="bpstructure"
+            id="field_bpstructure"
+            data-cy="bpstructure"
+            formControlName="bpstructure"
+          />
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="sgessApp.sstructure.emailstructure" for="field_emailstructure">Emailstructure</label>
+          <input
+            type="text"
+            class="form-control"
+            name="emailstructure"
+            id="field_emailstructure"
+            data-cy="emailstructure"
+            formControlName="emailstructure"
+          />
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="sgessApp.sstructure.profondeur" for="field_profondeur">Profondeur</label>
+          <input
+            type="number"
+            class="form-control"
+            name="profondeur"
+            id="field_profondeur"
+            data-cy="profondeur"
+            formControlName="profondeur"
+          />
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="sgessApp.sstructure.parent" for="field_parent">Parent</label>
+          <select
+            class="form-control"
+            id="field_parent"
+            data-cy="parent"
+            name="parent"
+            formControlName="parent"
+            [compareWith]="compareSstructure"
+          >
+            <option [ngValue]="null"></option>
+            <option [ngValue]="sstructureOption" *ngFor="let sstructureOption of sstructuresSharedCollection">
+              {{ sstructureOption.id }}
+            </option>
+          </select>
+        </div>
+
+        <div class="row mb-3">
+          <label jhiTranslate="sgessApp.sstructure.scode" for="field_scodes">Scode</label>
+          <select
+            class="form-control"
+            id="field_scodes"
+            data-cy="scode"
+            multiple
+            name="scodes"
+            formControlName="scodes"
+            [compareWith]="compareScodevaleur"
+          >
+            <option [ngValue]="scodevaleurOption" *ngFor="let scodevaleurOption of scodevaleursSharedCollection">
+              {{ scodevaleurOption.id }}
+            </option>
+          </select>
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="sgessApp.sstructure.slocalite" for="field_slocalite">Slocalite</label>
+          <select
+            class="form-control"
+            id="field_slocalite"
+            data-cy="slocalite"
+            name="slocalite"
+            formControlName="slocalite"
+            [compareWith]="compareSlocalite"
+          >
+            <option [ngValue]="null"></option>
+            <option [ngValue]="slocaliteOption" *ngFor="let slocaliteOption of slocalitesSharedCollection">{{ slocaliteOption.id }}</option>
+          </select>
+        </div>
+      </div>
+
+      <div>
+        <button type="button" id="cancel-save" data-cy="entityCreateCancelButton" class="btn btn-secondary" (click)="previousState()">
+          <fa-icon icon="ban"></fa-icon>&nbsp;<span jhiTranslate="entity.action.cancel">Annuler</span>
+        </button>
+
+        <button
+          type="submit"
+          id="save-entity"
+          data-cy="entityCreateSaveButton"
+          [disabled]="editForm.invalid || isSaving"
+          class="btn btn-primary"
+        >
+          <fa-icon icon="save"></fa-icon>&nbsp;<span jhiTranslate="entity.action.save">Sauvegarder</span>
+        </button>
+      </div>
+    </form>
+  </div>
+</div>

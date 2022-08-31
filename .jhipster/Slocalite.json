@@ -1,0 +1,47 @@
+{
+  "applications": "*",
+  "changelogDate": "20220831120823",
+  "dto": "no",
+  "embedded": false,
+  "entityTableName": "slocalite",
+  "fields": [
+    {
+      "fieldName": "codelocalite",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "nomlocalite",
+      "fieldType": "String"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "Slocalite",
+  "pagination": "pagination",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "sstructure",
+      "otherEntityRelationshipName": "slocalite",
+      "relationshipName": "sstructure",
+      "relationshipType": "one-to-many"
+    },
+    {
+      "otherEntityName": "slocalite",
+      "relationshipName": "parent",
+      "relationshipType": "many-to-one"
+    },
+    {
+      "otherEntityName": "scodevaleur",
+      "relationshipName": "natureLocalite",
+      "relationshipType": "many-to-one"
+    },
+    {
+      "otherEntityName": "scodevaleur",
+      "otherEntityRelationshipName": "slocalite",
+      "relationshipName": "typeLocalite",
+      "relationshipType": "many-to-one"
+    }
+  ],
+  "service": "serviceImpl"
+}

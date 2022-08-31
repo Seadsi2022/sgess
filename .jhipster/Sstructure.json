@@ -1,0 +1,65 @@
+{
+  "applications": "*",
+  "changelogDate": "20220831120824",
+  "dto": "no",
+  "embedded": false,
+  "entityTableName": "sstructure",
+  "fields": [
+    {
+      "fieldName": "nomstructure",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "siglestructure",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "telstructure",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "bpstructure",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "emailstructure",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "profondeur",
+      "fieldType": "Long"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "Sstructure",
+  "pagination": "pagination",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "evaleurvariable",
+      "otherEntityRelationshipName": "sstructure",
+      "relationshipName": "evaleurvariable",
+      "relationshipType": "one-to-many"
+    },
+    {
+      "otherEntityName": "sstructure",
+      "relationshipName": "parent",
+      "relationshipType": "many-to-one"
+    },
+    {
+      "otherEntityName": "scodevaleur",
+      "otherEntityRelationshipName": "sstructure",
+      "ownerSide": true,
+      "relationshipName": "scode",
+      "relationshipType": "many-to-many"
+    },
+    {
+      "otherEntityName": "slocalite",
+      "otherEntityRelationshipName": "sstructure",
+      "relationshipName": "slocalite",
+      "relationshipType": "many-to-one"
+    }
+  ],
+  "service": "serviceImpl"
+}
